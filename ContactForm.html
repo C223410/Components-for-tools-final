@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONTACT FORM</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  </head>
+  <body>
+    <header class="flex justify-center my-11 max-w-[1320px] m-auto">
+      <div class="flex flex-col justify-center items-center">
+        <h1 class="text-[#D99904] font-[400]">---Send Us a Message---</h1>
+
+        <hr class="w-[424px] mt-10 text-[#E8E8E8]" />
+        <div class="flex justify-center items-center">
+          <h1 class="py-7 items-center">CONTACT FORM</h1>
+        </div>
+        <hr class="w-[424px] text-[#E8E8E8]" />
+
+      </div>
+    </header>
+
+    <section
+      class=" bg-[#F3F3F3] my-11 max-w-[1320px] m-auto p-12"
+    >
+
+    <div class="flex justify-center w-[100%]">
+
+        <div class="flex w-[100%]">
+            <div class="w-[100%]">
+              <h1>Name*</h1>
+              <input
+                type="text"
+                class="w-[100%] h-[40px] border-2 border-[#ffff] rounded-md bg-white"
+                placeholder="Enter your name"
+              />
+            </div>
+    
+            <div class="ml-5 w-[100%]">
+              <h1>Email*</h1>
+              <input
+                type="email"
+                class="w-[100%] h-[40px] border-2 border-[#ffff] rounded-md bg-white"
+                placeholder="Enter your email"
+              />
+            </div>
+          </div>
+    
+    </div>
+     
+
+        <div class="mt-5">
+            <div class="w-[100%]">
+            <h1>Phone*</h1>
+            <input
+                type="text"
+                class="w-[100%] h-[40px] border-2 border-[#ffff] rounded-md bg-white"
+                placeholder="Enter your phone number"
+            />
+            </div>
+    
+            <div class="w-[100%] mt-5">
+            <h1>Message*</h1>
+            <input
+                type="text"
+                class="w-[100%] h-[300px] border-2 border-[#ffff] rounded-md bg-white"
+                placeholder="Enter your message here"
+            />
+            </div>
+            
+            <div class="flex items-center mt-9 bg-white w-[250px]">
+                <div class="flex justify-center items-center">
+                    <div class="text-center">
+                        
+                      <button id="verifyBtn" class="text-gray-500 ml-5 p-4 rounded-lg hover:bg-blue-600">
+                        I'm not a robot
+                      </button>
+
+                      <div id="verifiedText" class="mt-4 text-green-500 hidden">
+                        <span class="text-xl">✔ Verified!</span>
+                      </div>
+                    </div>
+                  
+                    <script>
+                      const verifyBtn = document.getElementById('verifyBtn');
+                      const verifiedText = document.getElementById('verifiedText');
+                  
+                      verifyBtn.addEventListener('click', () => {
+                        verifyBtn.classList.add('hidden'); 
+                        verifiedText.classList.remove('hidden'); 
+                      });
+                    </script>
+                  </div>
+
+                <img class="h-[78px]" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/RecaptchaLogo.svg/1200px-RecaptchaLogo.svg.png" alt="">
+            </div>
+              
+            <div class="mt-36 flex justify-center">
+                <a href="http://" target="_blank" rel="noopener noreferrer"><button target_blank class="flex justify-center items-center px-5 py-4" style="background: linear-gradient(90deg, #835D23 0%, #B58130 100%)" type="button">
+                    <h1>Send Message</h1>
+                    <img src="paper-plane 1.svg" alt="">
+                </button> </a>
+                   
+            </div>
+                
+
+    </section>
+  </body>
+</html>
