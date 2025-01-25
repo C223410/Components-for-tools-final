@@ -65,9 +65,12 @@
             <h1>Message*</h1>
             <input
                 type="text"
-                class="w-[100%] h-[300px] border-2 border-[#ffff] rounded-md bg-white"
+                class="w-[100%] h-[300px] border-2 border-[#ffff] rounded-md bg-white placeholder-transparent relative"
                 placeholder="Enter your message here"
-            />
+                style="--placeholder-transform: translate(calc(100% - 1rem), 0);"
+                onfocus="this.classList.add('placeholder-transparent')"
+                onblur="this.classList.remove('placeholder-transparent')"
+            >
             </div>
             
             <div class="flex items-center mt-9 bg-white w-[250px]">
